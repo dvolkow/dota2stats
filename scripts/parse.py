@@ -9,6 +9,7 @@ from copy import deepcopy
 parser = argparse.ArgumentParser(description="Dota 2 matches parsing")
 parser.add_argument("--id", dest="id", help="Match ID for start")
 parser.add_argument("--config", dest="config", help="Configuration filename")
+parser.add_argument("--seq-size", dest="seq_size", default=15, help="Sequence size")
 parser.add_argument("--skill", dest="skill", help="Skill level")
 parser.add_argument("--mode", dest="mode", default="actual", help="Parse mode (actual, history)")
 
@@ -44,7 +45,9 @@ match_history_seq_f = settings['match_history_seq_url_f']
 match_details_f = settings['match_details_url_f']
 
 last_id = args.id
-for i in range(15):
+seq_size = args.seq_size
+
+for i in range(seq_size):
     players = []
 
     if args.mode == 'actual':

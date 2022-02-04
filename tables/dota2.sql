@@ -38,3 +38,27 @@ CREATE TABLE dota2.matches (
 PRIMARY KEY (start_time, match_id, account_id)
 ORDER BY (start_time, match_id, account_id)
 SETTINGS index_granularity = 8192;
+
+
+CREATE TABLE dota2.items (
+    actual_date         DateTime DEFAULT now(),
+    id                  UInt16,
+    name                String,
+    cost                UInt16,
+    secret_shop         UInt8,
+    side_shop           UInt8,
+    recipe              UInt8
+) ENGINE = MergeTree()
+PRIMARY KEY id
+ORDER BY id
+SETTINGS index_granularity = 8192;
+
+
+CREATE TABLE dota2.heroes (
+    actual_date         DateTime DEFAULT now(),
+    id                  UInt16,
+    name                String
+) ENGINE = MergeTree()
+PRIMARY KEY id
+ORDER BY id
+SETTINGS index_granularity = 8192;

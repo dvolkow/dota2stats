@@ -1,0 +1,6 @@
+venv/*
+dist/*
+build/*
+*.swp
+.idea/*
+__pycache__/*
