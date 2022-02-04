@@ -1,9 +1,11 @@
 {
   "token": "F054D314584DB7A5C6A1F8496680B485",
+  "token2": "0BAD669DADC69DD8FED4C2F227B138DA",
   "skill": "1",
   "match_history_url_f": "https://api.steampowered.com/IDOTA2Match_570/GetMatchHistory/V001/?key={key}&start_at_match_id={id}&skill={skill}&matches_requested=100&min_players=10",
   "match_details_url_f": "https://api.steampowered.com/IDOTA2Match_570/GetMatchDetails/V001/?match_id={id}&key={key}",
-  "match_history_seq_url_f": "https://api.steampowered.com/IDOTA2Match_570/GetMatchHistoryBySequenceNum/V001/?key={key}&start_at_match_seq_num={num}&matches_requested=100&skill={skill}&&min_players=10",
+  "match_history_seq_url_f": "https://api.steampowered.com/IDOTA2Match_570/GetMatchHistoryBySequenceNum/V001/?key={key}&start_at_match_seq_num={num}&matches_requested=200&skill={skill}&min_players=10",
+  "match_history_by_accid_url_f": "https://api.steampowered.com/IDOTA2Match_570/GetMatchHistory/V001/?key={key}&account_id={id}&matches_requested=100&min_players=10&start_at_match_id={match_id}",
 
   "player_info": [
     "account_id",
@@ -39,7 +41,9 @@
     "lobby_type",
     "game_mode",
     "radiant_score",
-    "dire_score"
+    "dire_score",
+    "duration",
+    "radiant_win"
   ],
 
   "general": [
@@ -50,12 +54,14 @@
     "int": [
       "match_id",
       "cluster",
+      "duration",
       "radiant_score",
       "dire_score",
       "account_id",
       "player_slot",
       "hero_id",
       "item_neutral",
+      "match_seq_num",
       "kills",
       "deaths",
       "assists",
@@ -82,7 +88,8 @@
       "leaver_status",
       "aghanims_scepter",
       "aghanims_shard",
-      "moonshard"
+      "moonshard",
+      "radiant_win"
     ]
   }
 }

@@ -1,6 +1,7 @@
 CREATE TABLE dota2.matches (
     start_time          DateTime,
     match_id            UInt64,
+    match_seq_num       UInt64,
     lobby_type          LowCardinality(String),
     game_mode           LowCardinality(String),
     radiant_score       UInt16,
