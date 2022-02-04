@@ -1,0 +1,16 @@
+[Unit]
+Description=Dota2stats service
+After=network.target
+StartLimitIntervalSec=0
+
+[Service]
+Type=simple
+WorkingDirectory=/home/dvolkow/wd/dota2stats/scripts
+OOMScoreAdjust=-100
+Restart=always
+RestartSec=1
+User=root
+ExecStart=/usr/bin/python3 run_actual.py
+
+[Install]
+WantedBy=multi-user.target

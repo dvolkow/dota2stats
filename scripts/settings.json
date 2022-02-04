@@ -1,0 +1,88 @@
+{
+  "token": "F054D314584DB7A5C6A1F8496680B485",
+  "skill": "1",
+  "match_history_url_f": "https://api.steampowered.com/IDOTA2Match_570/GetMatchHistory/V001/?key={key}&start_at_match_id={id}&skill={skill}&matches_requested=100&min_players=10",
+  "match_details_url_f": "https://api.steampowered.com/IDOTA2Match_570/GetMatchDetails/V001/?match_id={id}&key={key}",
+  "match_history_seq_url_f": "https://api.steampowered.com/IDOTA2Match_570/GetMatchHistoryBySequenceNum/V001/?key={key}&start_at_match_seq_num={num}&matches_requested=100&skill={skill}&&min_players=10",
+
+  "player_info": [
+    "account_id",
+    "player_slot",
+    "hero_id",
+    "item_neutral",
+    "kills",
+    "deaths",
+    "assists",
+    "leaver_status",
+    "last_hits",
+    "denies",
+    "gold_per_min",
+    "xp_per_min",
+    "level",
+    "net_worth",
+    "aghanims_scepter",
+    "aghanims_shard",
+    "moonshard",
+    "hero_damage",
+    "tower_damage",
+    "hero_healing",
+    "gold",
+    "gold_spent",
+    "scaled_hero_damage",
+    "scaled_tower_damage",
+    "scaled_hero_healing"
+  ],
+
+  "match_info": [
+    "start_time",
+    "match_id",
+    "lobby_type",
+    "game_mode",
+    "radiant_score",
+    "dire_score"
+  ],
+
+  "general": [
+    "skill"
+  ],
+
+  "types": {
+    "int": [
+      "match_id",
+      "cluster",
+      "radiant_score",
+      "dire_score",
+      "account_id",
+      "player_slot",
+      "hero_id",
+      "item_neutral",
+      "kills",
+      "deaths",
+      "assists",
+      "hero_damage",
+      "tower_damage",
+      "hero_healing",
+      "gold",
+      "gold_spent",
+      "scaled_hero_damage",
+      "scaled_tower_damage",
+      "scaled_hero_healing",
+      "last_hits",
+      "denies",
+      "gold_per_min",
+      "xp_per_min",
+      "level",
+      "net_worth"
+    ],
+
+    "str": [
+      "lobby_type",
+      "game_mode",
+      "skill",
+      "leaver_status",
+      "aghanims_scepter",
+      "aghanims_shard",
+      "moonshard"
+    ]
+  }
+}
