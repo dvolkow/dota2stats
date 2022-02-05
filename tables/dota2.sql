@@ -63,3 +63,20 @@ CREATE TABLE dota2.heroes (
 PRIMARY KEY id
 ORDER BY id
 SETTINGS index_granularity = 8192;
+
+
+CREATE TABLE dota2.players (
+    actual_date                 DateTime DEFAULT now(),
+    account_id                  UInt64,
+    name                        String,
+    steamid                     UInt64,
+    country                     LowCardinality(String),
+    solo_competitive_rank       Nullable(UInt16),
+    competitive_rank            Nullable(UInt16),
+    rank_tier                   Nullable(UInt16),
+    leaderboard_rank            Nullable(UInt16),
+    mmr_estimate                Nullable(UInt16)
+) ENGINE = MergeTree()
+PRIMARY KEY account_id
+ORDER BY account_id
+SETTINGS index_granularity = 8192;
